@@ -1,0 +1,185 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    /* background: #000; */
+    width: calc(100vw - 160px);
+    height: 100%;
+    margin: 20px 80px;
+    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em 5em;
+    grid-auto-columns: 1fr;
+    gap: 25px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "box1 box1 box2"
+      "box1 box1 box2"
+      "box1 box1 box2"
+      "box3 box4 box5"
+      "box3 box4 box5"
+      "box3 box4 box5"
+      "box6 box6 box5"
+      "box6 box6 box5"
+      "box6 box6 box5"
+      "box7 box8 box9"
+      "box7 box8 box9"
+      "box7 box8 box9"
+      "box7 box10 box11"
+      "box7 box10 box11"
+      "box7 box10 box11"
+      "box12 box12 box12"
+      "box12 box12 box12"
+      "box12 box12 box12";
+  }
+  
+  .header { 
+    grid-area: header; 
+    /* GEORGIA TODO */
+    /* font-family: HEADER FONT ; */
+  }
+  
+  .box1 { grid-area: box1; }
+  
+  .box2 { grid-area: box2; }
+  
+  .box3 { grid-area: box3; }
+  
+  .box4 { grid-area: box4; }
+  
+  .box5 { grid-area: box5; }
+  
+  .box6 { grid-area: box6; }
+  
+  .box7 { grid-area: box7; }
+  
+  .box8 { grid-area: box8; }
+  
+  .box9 { grid-area: box9; }
+  
+  .box10 { grid-area: box10; }
+  
+  .box11 { grid-area: box11; }
+  
+  .box12 { grid-area: box12; }
+  
+  .post {
+    position: relative;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 300ms opacity;
+  }
+
+  .post:hover {
+    opacity: 0.75 !important;
+    cursor: pointer;
+  }
+
+  .label{
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    left: 20px;
+    top: 15px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .label div {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .info {
+    border-radius: 30px;
+    border: #fff 1px solid;
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .info div {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+  }
+
+
+
+  .help-container {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.help-container .help-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.help-container .help {
+    position: fixed;
+    height: 80vh;
+    width: 80vw;
+    z-index: 1;
+    background-color: white;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 20px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.help-info {
+  padding: 0 10%;
+}
+
+.help-container.hidden {
+    visibility: hidden;
+}
+.help.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+
+.box1 { background-image: url('assets/week-1.png');}
+.box2 { background-image: url('assets/week-2.jpg');}
+.box3 { background-image: url('assets/week-3.png');}
+.box4 { background-image: url('assets/week-4.png');}
+.box5 { background-image: url('assets/week-3-1.jpg');}
+.box6 { background-image: url('assets/week-6.png');}
+.box7 { background-image: url('assets/week-7.png');}
+.box8 { background-image: url('assets/week-8.png');}
+.box9 { background-image: url('assets/week-9.png');}
+.box10 { background-image: url('assets/week-10.png');}
+.box11 { background-image: url('assets/week-11.png');}
+.box12 { background-image: url('assets/week-12.png');}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: large;
+}
+
+.close:hover {
+  cursor: pointer;
+}

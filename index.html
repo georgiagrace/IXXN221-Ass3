@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TODO</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        
+        <script>
+            window.addEventListener('DOMContentLoaded', async function () {
+                
+                const posts = document.querySelectorAll('.post');
+                let id = 1;
+                posts.forEach(post => {
+                    post.addEventListener('click', function handleClick(event) {
+                        document.querySelector('.help-container').classList.toggle('hidden');
+                        document.querySelector('#'+post.dataset.modal).classList.toggle('hidden');
+                    });
+                    id++;
+                });
+
+                document.querySelector('.help-bg').addEventListener('click', () => {
+                    document.querySelector('.help-container').classList.toggle('hidden')
+                    document.querySelectorAll('.help').forEach(element => {
+                        element.classList.add('hidden');
+                    });
+                })
+
+                document.querySelectorAll('.close').forEach(element => {
+                    element.addEventListener('click', () => {
+                        document.querySelector('.help-container').classList.toggle('hidden');
+                        document.querySelectorAll('.help').forEach(element => {
+                            element.classList.add('hidden');
+                        });
+                    });
+                });
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>
+                    WEB DESIGN I JOURNAL
+                </h1>
+                <h3>
+                    BY GEORGIA MARSHALL
+                </h3>
+            </div>
+            
+            <div class="box1 post" data-modal="post1">
+                <div class="label">
+                    <div>Week one, 2023</div>
+                </div>
+
+                <div class="info">
+                    <div>Introduction</div>
+                </div>
+            </div>
+
+            <div class="box2 post" data-modal="post2" data-bg="post-2">
+                <div class="label">
+                    <div>Week two, 2023</div>
+                </div>
+
+                <div class="info">
+                    <div>History, Personas, HTML</div>
+                </div>
+            </div>
+
+            <div class="box3 post" data-modal="post3">
+                <div class="label">
+                    <div>Week three, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>History, Goals, Venn Diagram</div>
+                </div>
+            </div>
+
+            <div class="box4 post" data-modal="post4">
+                <div class="label">
+                    <div>Week four, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>History, Journey Map, User Flow</div>
+                </div>
+            </div>
+            
+            <div class="box5 post" data-modal="post5">
+                <div class="label">
+                    <div>Week five, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>CSS Grids</div>
+                </div>
+            </div>
+            
+            <div class="box6 post" data-modal="post6">
+                <div class="label">
+                    <div>Week six, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>Colour, Typography,GitHub </div>
+                </div>
+            </div>
+            
+            <div class="box7 post" data-modal="post7">
+                <div class="label">
+                    <div>Week seven, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>Composition, Affordances </div>
+                </div>
+            </div>
+            
+            <div class="box8 post" data-modal="post8">
+                <div class="label">
+                    <div>Week eight, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>CSS Grids</div>
+                </div>
+            </div>
+
+            <div class="box9 post" data-modal="post9">
+                <div class="label">
+                    <div>Week nine, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>Responsive Design</div>
+                </div>
+            </div>
+
+            <div class="box10 post" data-modal="post10">
+                <div class="label">
+                    <div>Week ten, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>Blog Demo</div>
+                </div>
+            </div>
+            
+            <div class="box11 post" data-modal="post11">
+                <div class="label">
+                    <div>Week eleven, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>Presentations</div>
+                </div>
+            </div>
+
+            <div class="box12 post" data-modal="post12">
+                <div class="label">
+                    <div>Week twelve, 2023</div>
+                </div>
+                
+                <div class="info">
+                    <div>Final Week</div>
+                </div>
+            </div>
+
+          </div>
+
+          <div id="post-information" class="help-container hidden">
+            <div class="help-bg"></div>
+            
+            <div id="post1" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week one</h1>
+                <p> Week one was a good start to the trimester, it got me excited for what is ahead. I feel like some of the past design courses have not set me up to create a full UX experience, so I am looking forward to creating a full project from start to finish. I normally am not a fan of icebreakers but this class and Haowei especially makes you feel very comfortable and it was nice meeting everyone online. Overall, I am looking forward to getting started with this course and assignment one.  </p>
+            </div>
+
+            <div id="post2" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week two</h1>
+                <p> This week was interesting and it was cool to look back on the history of web design, sometimes it is easy to forget how recent the internet and web design is and how we are still evolving with it. Learning about the start of HTML, CSS and JS made me realise I think it is important to understand these languages to be a good web designer. It may not be essential for me to know how to code at a intermediate level but to at least understand the basics would be helpful as a future web designer. This is because if I will be working with developers, it is good to understand what is possible for them and to communicate with them better when working on projects. Anyway, it is cool to see how much the internet has developed over time and I find it cool how I kind of grew up with it – gives me more of an appreciation for the world-wide-web. Moving onto persona’s, I had been familiar with these from my previous courses but, I found them interesting and was looking forward to creating one for my first assignment. Same thing for the HTML lecture, I felt like I could follow along pretty well because of previous courses but it is always good to get a refresher. Side note: I find it funny how not only do fashion trends come around but now people are using ‘2000’ style, old school web design as a trend lol.  </p>
+            </div>
+
+            <div id="post3" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week three</h1>
+                <p> This week we continued looking at the history of web design and this time it was from 1998-2008, so this is when the internet became a bit more stylish and interactive. I am enjoying learning about all these little things that actual hold a very important place in web design. One thing I did not know was how early WordPress was created as the first CMS, I thought that was cool and interesting to see how much WordPress has developed as well as how impressive newer CMS platforms are today. We also looked at design goals which will be a big part in our assignment one, it was interesting learning about goals as they are the foundation of a good design. Seeing the designers, users and shared goals in a Venn diagram helped put into perspective how much you need to think about when creating a product, this will help me as a future designer because it is a practical and effective way to understand everyone’s goals before designing a product. The coding lecture this week was about HTML lists, I had a pretty good understand of lists in HTML from my previous courses but I hadn’t learnt anything about anchor tags before so that was interesting to learn about how to do those, I am not sure how much I will use this in the future but I think it is cool to understand and know these elements. </p>
+            </div>
+
+            <div id="post4" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week four</h1>
+                <p> This week we finished off the history of web design from 2008 – present, this is where we learnt the elements and features that we see on websites today, it made me realise how fast web design has evolved from 2008 and how lucky we are to have all of the resources available to us. We are really set up in a world where we have unlimited resources and information to make us the best web designers possible. It was cool learning about Figma and Adobe XD – software’s that will be highly used in my future career. Another thing I found interesting was learning about Corporate Memphis because it is clearly a trend that we see on a lot of websites but don’t think about much but now that I know that it is a trend (and I am guilty of using this too), it makes me what to avoid these trends and try and think outside the box more when it comes to my designing in the future. Something else we focused on this week was customer journey maps, another element that will be a part of assignment one. I had created these before in previous assignments so I was familiar with the idea but it was nice to see it broken down and explained more. Next was the user flow which I was also familiar with but once again it was nice for it to be broken down so I could really understand the process and also the best practices to use when creating a user flow. I never knew that even the shapes of the elements had a specific meaning, so I will use this information in the future. This course has definitely been the most clear and helpful course I’ve taken at VUW. For this week’s coding lecture, we learnt about the CSS box model. </p>
+            </div>
+
+            <div id="post5" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week five</h1>
+                <p> This week we didn’t go through much content because we have to hand in our assignment in a couple of days. I was feeling a bit stressed at this point so focused on working on the assignment myself. They were very helpful in showing us how to lay everything out though which made me feel more at ease. Overall I am enjoying doing this assignment and getting an understanding of how user persona’s, Venn diagrams, journey map and user flows work, I feel sort of confident that I did it right but it defiantly makes you think about your design rather than just designing something from scratch, it’s nice and beneficial to have rationale behind your design decisions. The coding lecture this week was about CSS Grids which I am a little familiar with but it was good to get another explanation and example so I felt more confident doing them when it comes to the blog in project 3. I feel like I can understand and keep up with the coding content because of the previous courses I’ve done but it still does make my brain think a lot (I can’t imagine what it’s like when it gets more complicated). However, I am happy to learn and think these skills will pay off in the future as a web designer. </p>
+            </div>
+
+            <div id="post6" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week six</h1>
+                <p> I am super excited its nearly the mid-tri break but I have to say this was one of my favourite classes so far since we were talking about colour, typography and assignment 2.1. I was feeling good and excited about bringing my design to life in Figma and it is definitely the best part of every course, however, I did feel a bit overwhelmed because I always want to make it perfect, I am glad they showed us some examples to understand what they expect from us. I learnt so much about colour and typography this week, it was super interesting to learn about the different colour schemes like monochromatic, analogous and complementary. Looking back on my previous designs, I feel like I never understand how to use colours and maybe over did it most of the time, so now I feel confident going into this assignment that I can use the right colour schemes and also ensure a balance of white space and colour. I was already pretty familiar with how different colours identity but I will ensure that I chose colours that have a meaning behind it for my design. Another thing that I had never thought about (that I should have) is contrast – I have done so many designs thinking it was easy to read but now I realise that it may have been for me but will this be accessibly to everyone? Using a contrast checker will always be a step I take when designing now – as well as the 60-30-10 rule. Typography was also very interesting to learn about and I know this content will help me a lot in the future. Just like the colours in my previous work, I always feel like I never understand font scaling when designing apps and websites, and I have even got negative feedback in the past saying my font sizes are too small – so this was very helpful information that I’ll hold onto for my future career. Doing the workshop this week was also very helpful and interesting because it makes you think about how the little details really matter when designing. The coding lecture this week was the basics of GitHub – a platform I have never used before, so this was very informative and helpful for the coding paper. </p>
+            </div>
+
+            <div id="post7" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week seven</h1>
+                <p> This week we focused on composition and affordances, which was very helpful for designing assignment 2.1. I feel like understanding the difference between gutters, margins, padding etc has always been a brain twister and I never have completely understood which one you are meant to use, so this was helpful getting insight into the different and how you are meant to use them. It showed me how important grids and spacing are for web design and how it can change the whole visual aspect of a webpage – ensuring there is cohesiveness and format is super important in a successful design. The other composition elements that were helpful and interesting to learn about were visual hierarchy, scale, white space and balance. I have used most of these compositions in the past but it was helpful to have them explained further. The affordances were the most interesting to learn about this week though because once again, it is something you just do – but never know or understand why. Learning about the mental models was really interesting because it makes so much sense and as a designer it is good to understand why you are adding specific elements and that no matter how much you want to be different or niche in your design, if you were to truly put the customer experience first, you would ensure that you use these mental models and affordances so that you’re customer will have a good experience – no matter the site. </p>
+            </div>
+
+            <div id="post8" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week eight</h1>
+                <p>This week we looked at assignment 2.2 and I found it hard to make a decision on whether to code or use CMS. At this point, I did not feel too confident to code a website and feel like it would take me longer to do than doing a CMS site, I also have a small amount of experience using CMS platforms so I felt like that was the right thing to do. I chose to use Webflow because I was more familiar with it than Editor X and it looked like it had more tools and easier to understand. The coding lecture for this week was another one about CSS grids.  </p>
+            </div>
+
+            <div id="post9" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <div class="help-info">
+                    <h1>Week nine</h1>
+                <p> This week we focused on responsive design and file organisation. I feel like I have a good understanding of responsive design but not enough skills to put it into play, it is much easier to design on Figma than to code or use CMS platforms. I recently tried to teach myself how to use the responsive design tool on Figma and it was much harder than I expected – it is something I want to continue to learn. Webflow makes it easy to view the other device sizes but does not make it easy to make the elements responsive – the experiences I have with Webflow is very negative (all because of me) and I find it extremely challenging, there are so many different ways you can try and make it responsive but nothing ever seems to work the way you want it to so it’s just back and forth trying to get it right. However, it was interesting to learn about it this week and it showed the importance of being responsive – especially since by my research, most people visit websites on their mobile nowadays. File organisation is something I have always felt pretty confident in (being a perfectionist), but it was interesting to learn about image files and sizes because there is nothing worse than having a photo all ready and then needed to re-size it. </p>
+                </div>
+            </div>
+
+            <div id="post10" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week ten</h1>
+                <p> This week was all about assignment 2.2 – my CMS website. I thought I would find this project easy – but boy was I wrong. I had experience with CMS platforms before therefore I thought using a new one (Webflow) would be a similar experience, however I found it extremely challenging in many ways. It was an eye opener for me to realise how different designing on Figma vs designing on a CMS platform was, and I am glad I now know. I started off my project feeling good, trying to mimic my Figma design the best I could and it all seemed straight forward until the ‘technical’ parts come into play. The filtering system for my service provider platform was the main compartment I needed to ensure was good, however it took me many tries and many different ways to make it the way I wanted. Webflow uses a lot of custom code and since I don’t know how to code, I was searching for a way to do it without code. I found a way to filter through different ‘locations’ and ‘services’ without code, however, this limited me to only being able to filter one at a time (for example, I couldn’t filter Auckland Cleaners, only Cleaners or any service providers in Auckland). I knew I couldn’t continue with this system because it is not user-friendly and if I was on the other end using this site – I wouldn’t. I kept looking for different ways and eventually, I purchased a premium Webflow account so I could add in custom code, I found a tutorial on how to use the checklist element on Webflow and therefore, I successfully created my minimal filtering system. I thought that would be the end of my stress – then I started with making my website responsive, this is when things got even more tricky. I had a vision of how I wanted my filtering system to look like on tablets and mobile from previous websites I have experienced and what is common, however, implementing this is a whole other situation. I really could not figure out how to do this on Webflow after watching even multiple videos and searching the web for help. There were many pages I designed on Figma that I did not have the time to complete on Webflow which did frustrate me at the end, I didn’t realise how long I would spend my time on the little things. Designing on Webflow was a very humbling experience, no matter how good you are at designing, there will always be platforms that trip you up. This project definitely made me grow as a designer and learn a lot of patience. Going forward, I want to practice and learn Webflow because I think it is an amazing CMS platform (if you know what you are doing).</p>
+            </div>
+
+            <div id="post11" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week eleven</h1>
+                <p> Only two more weeks to go! We had a presentations and I have to say, they are probably the least exciting or worst part of a course and being a designer. I love to talk, however, I get extremally nervous and lose my train of thought when I am doing presentations. For this one particular, I did a pre-recorded presentation and it might actually be worse than doing a normal one because you aren’t engaging with anyone apart from yourself. It is a huge goal for me to get more confident in public speaking and presentations because I know it will be part of my career as a designer and it is a massive skill to have. In regards to the coding over the past 10 weeks, I have found the coding lectures pretty helpful, despite knowing a lot of the information already from previous courses, but it has been nice for it to get fresh in my mind and I know it will help for my blog. I feel like the basics of it will help me create what I want to create for my blog but I might research more online to ensure I am happy with how it looks. </p>
+            </div>
+
+            <div id="post12" class="help hidden">
+                <a class="close">&#x2715;</a>
+                <h1>Week twelve</h1>
+                <p> FAVOURITE COURSE TO DATE. This is my last trimester of full-time University (need to finish my capstone next year) and I am so happy with how it has ended. This course has been amazing, informative and engaging, I really enjoyed everything about it and the teachers have been great and so helpful. I feel like I learnt a lot during this period and everything that I do in terms of design is starting to make a lot more sense, I think most of this content I will never forget and it will help me a lot in the future. I am very happy to be finished and say goodbye to uni!  </p>
+            </div>
+
+            </div>
+        </div>
+    </body>
+</html>
